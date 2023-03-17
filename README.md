@@ -30,3 +30,23 @@ Example result:
     "Status": "active",
     "StatusMessage": "validating"
 }
+
+
+This command for check status:
+aws ec2 describe-export-image-tasks --export-image-task-id export-ami-id
+
+result :
+{
+    "ExportImageTasks": [
+        {
+            "ExportImageTaskId": "export-ami-1234567890abcdef0"
+            "Progress": "21",
+            "S3ExportLocation": {
+                "S3Bucket": "my-export-bucket",
+                "S3Prefix": "exports/"
+            },
+            "Status": "active",
+            "StatusMessage": "updating"
+        }
+    ]
+}
